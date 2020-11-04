@@ -35,7 +35,9 @@ def generate_data():
     np.save("y",np.array(_y))
     np.save("x",np.array(_x))
 
-#collect_data()
+    return _x, _y
+
+#x, y = generate_data()
 
 #print(np.load("x.npy"))
 #print(np.load("y.npy"))
