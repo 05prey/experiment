@@ -1,6 +1,6 @@
 #main training
-from models.dataset_generator import generate_data
-from models.network_model import Network
+from mymodels.dataset_generator import generate_data
+from mymodels.network_model import Network
 
 import torch
 from torch import nn, optim

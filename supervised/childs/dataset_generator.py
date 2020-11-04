@@ -38,17 +38,11 @@ def generate_data(sample_number):
         action = np.array([[action]])
         y = np.append(y, action, axis=0)
 
-
-    #np.save("y",np.array(y))
-    #np.save("x",np.array(x))
-
-    #x = np.asarray(x)
-    #y = np.asarray(y)
     sample = np.concatenate((x, y), axis=1)
 
     return sample
 
-sample = generate_data(10)
+#sample = generate_data(10)
 
 #print(np.load("x.npy"))
 #print(np.load("y.npy"))
