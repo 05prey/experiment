@@ -4,8 +4,10 @@ import torch
 from torch import nn
 import numpy as np
 
-class SupervisedModel():
+class Network(nn.Module):
     def __init__(self, input_size, output_size):
+        super().__init__()
+
         self.input_size = input_size
         self.output_size = output_size
 
@@ -14,17 +16,15 @@ class SupervisedModel():
         self.hidden3 = nn.Linear(16, self.output_size)
 
         self.activation_hidden = nn.ReLU()
-        self.activation_final = nn.Softmax()
+        self.activation_final = nn.LogSoftmax()
 
     def forward(self, x):
-        x = self.hidden1(x)
-        x = self.activation_hidden(x)
 
-        x = self.hidden2(x)
-        x = self.activation_hidden(x)
+        x = self.activation_hidden(self.hidden1(x))
 
-        x = self.hidden3(x)
-        x = self.activation_final(x)
+        x = self.activation_hidden(self.hidden2(x))
+
+        x = self.activation_final(self.hidden3(x))
 
         return x
 
