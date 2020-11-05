@@ -73,7 +73,7 @@ def generate_data(sample_number):
         y = np.append(y, action, axis=0)
 
     samples = np.concatenate((x, y), axis=1)
-    np.save('samples.npy', samples)
+    np.save('samples_12.npy', samples)
 
     return samples
 

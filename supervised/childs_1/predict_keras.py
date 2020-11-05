@@ -3,11 +3,11 @@ import numpy as np
 from keras.models import Sequential
 from keras.layers import Dense, Dropout, BatchNormalization, LeakyReLU
 
-def myPredict(x_test, model):
-    x_test = x_test.reshape(-1,12)
+def myPredict_1(x_test, model):
+    x_test = x_test.reshape(-1,1)
     y_pred = model.predict(x_test)
 
-    print("prediction values:",y_pred)
+    print("prediction values for 1 input:",y_pred)
     print("\n")
     y_binary_classes = np.argmax(y_pred,axis = 1)
 

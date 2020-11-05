@@ -2,7 +2,7 @@
 from keras.models import Sequential
 from keras.layers import Dense, Dropout, BatchNormalization, LeakyReLU
 
-class KerasNetwork:
+class KerasNetwork_12():
     def __init__(self, input_dim, output_dim):
 
         self.model = Sequential()
