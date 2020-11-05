@@ -51,7 +51,7 @@ plt.show()
 #prediction
 #-180  -150  -120  -90  -60  -30  0  30  60  90  120  150  180 :angle intervals
 #     0     1     2    3    4    5  6   7   8   9   10   11    : corresponding input nodes
-x_test = np.array([0,0,0,0,0,-20/30,0,0,0,0,0,0]) #test data-> angle:-20 interval:-30 0  input node:5, expected output node:3(missile)
+x_test = np.array([0, 0, 0, 0, 0, -20/30, 0, 0, 0, 0, 0, 0]) #test data-> angle:-20 interval:-30 0  input node:5, expected output node:3(missile)
 myPredict(x_test, mynet.model)
 
 
