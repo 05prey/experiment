@@ -21,14 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1f605f65-7f01-42ca-a872-7ae854b3262e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/supervised/childs/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/supervised/childs/dataset_generator.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/supervised/childs/network_model.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/supervised/childs/network_model_keras.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/supervised/childs/predict_keras.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/supervised/dataset_generator.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/supervised/samples.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/supervised/train_with_keras.py" beforeDir="false" afterPath="$PROJECT_DIR$/supervised/train_with_keras.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/supervised/childs_12/network_model_keras.py" beforeDir="false" afterPath="$PROJECT_DIR$/supervised/childs_12/network_model_keras.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
