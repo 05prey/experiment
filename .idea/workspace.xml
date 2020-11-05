@@ -39,7 +39,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../kasim5/fiveml" />
   </component>
-  <component name="RunManager" selected="Python.train_with_keras">
+  <component name="RunManager" selected="Python.dataset_generator">
     <configuration name="dataset_generator (2)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="experiment" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -147,11 +147,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.dataset_generator" />
         <item itemvalue="Python.train_with_keras" />
         <item itemvalue="Python.dataset_generator (2)" />
         <item itemvalue="Python.dataset_generator_validation" />
         <item itemvalue="Python.dataset_generator_training" />
-        <item itemvalue="Python.dataset_generator" />
       </list>
     </recent_temporary>
   </component>
@@ -177,22 +177,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1604568194750" />
-    <state width="1515" height="135" key="GridCell.Tab.0.bottom" timestamp="1604571205008">
+    <state width="1515" height="270" key="GridCell.Tab.0.bottom" timestamp="1604572615609">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="135" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1604571205008" />
-    <state width="1515" height="135" key="GridCell.Tab.0.center" timestamp="1604571205007">
+    <state width="1515" height="270" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1604572615609" />
+    <state width="1515" height="270" key="GridCell.Tab.0.center" timestamp="1604572615609">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="135" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1604571205007" />
-    <state width="1515" height="135" key="GridCell.Tab.0.left" timestamp="1604571205007">
+    <state width="1515" height="270" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1604572615609" />
+    <state width="1515" height="270" key="GridCell.Tab.0.left" timestamp="1604572615609">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="135" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1604571205007" />
-    <state width="1515" height="135" key="GridCell.Tab.0.right" timestamp="1604571205007">
+    <state width="1515" height="270" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1604572615609" />
+    <state width="1515" height="270" key="GridCell.Tab.0.right" timestamp="1604572615609">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="135" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1604571205007" />
+    <state width="1515" height="270" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1604572615609" />
     <state width="1515" height="220" key="GridCell.Tab.1.bottom" timestamp="1604570427011">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

@@ -8,7 +8,7 @@ from keras.optimizers import Adam
 from keras.optimizers import SGD
 from keras.utils import to_categorical
 
-from childs.dataset_generator import generate_data
+#from childs.dataset_generator import generate_data
 from childs.network_model_keras import KerasNetwork
 from childs.predict_keras import myPredict
 
@@ -17,8 +17,7 @@ warnings.filterwarnings('ignore')
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
 #prepare data
-sample_number = 1000
-samples = generate_data(sample_number)
+samples = np.load('samples.npy')
 x = samples[:,:-1]
 y = samples[:,-1]
 
