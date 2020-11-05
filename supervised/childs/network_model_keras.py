@@ -6,9 +6,8 @@ class KerasNetwork:
     def __init__(self, input_dim, output_dim):
 
         self.model = Sequential()
-        self.model.add(BatchNormalization(input_shape = (input_dim,)))
 
-        self.model.add(Dense(16))
+        self.model.add(Dense(16, input_shape = (input_dim,)))
         self.model.add(BatchNormalization())
         self.model.add(LeakyReLU())
         self.model.add(Dropout(0.5))

@@ -8,7 +8,7 @@ from keras.optimizers import Adam
 from keras.optimizers import SGD
 from keras.utils import to_categorical
 
-from childs.dataset_generator import generate_data
+#from childs.dataset_generator import generate_data
 from childs.network_model_keras import KerasNetwork
 from childs.predict_keras import myPredict
 
@@ -17,8 +17,7 @@ warnings.filterwarnings('ignore')
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
 #prepare data
-sample_number = 1000
-samples = generate_data(sample_number)
+samples = np.load('samples.npy')
 x = samples[:,0]
 y = samples[:,1]
 
@@ -37,7 +36,7 @@ mynet = KerasNetwork(input_dim, output_dim)
 mynet.model.compile(loss = "categorical_crossentropy", optimizer = optimizer1, metrics=["accuracy"])
 
 #train
-history = mynet.model.fit(x = x, y = y_onehot, batch_size = 64, epochs = 300, verbose = 1)
+history = mynet.model.fit(x = x, y = y_onehot, batch_size = 64, epochs = 30, verbose = 1)
 
 print("training completed")
 #logs
@@ -49,7 +48,7 @@ plt.legend()
 plt.show()
 
 #prediction
-x_test = np.array([150])
+x_test = np.array([160])# test data-> angle:160, expected output node: 2 (chaff)
 myPredict(x_test, mynet.model)
 
 

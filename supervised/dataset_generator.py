@@ -15,34 +15,36 @@ def generate_data(sample_number):
     for _ in range(sample_number):
 
         relative_bearing = randint(-180,180)
-        rb = np.array([[relative_bearing]])
+        rb = np.array([[relative_bearing / 180]])
 
         x = np.append(x, rb, axis=0)
 
-        if (-10 <= relative_bearing <= 0) or ( 0 <= relative_bearing <= 10):
+        if (-30 <= relative_bearing <= 0) or ( 0 <= relative_bearing <= 30):
 
             action = 3
 
-        elif (-180 <= relative_bearing <= -170) or (170 <= relative_bearing <= 180):
+        elif (-180 <= relative_bearing <= -150) or (150 <= relative_bearing <= 180):
 
             action = 2
 
-        elif 10 < relative_bearing < 170:
+        elif 30 < relative_bearing < 150:
 
             action = 1
 
-        elif -170 < relative_bearing < -10:
+        elif -150 < relative_bearing < -30:
 
             action = 0
 
         action = np.array([[action]])
         y = np.append(y, action, axis=0)
 
-    sample = np.concatenate((x, y), axis=1)
+    samples = np.concatenate((x, y), axis=1)
+    np.save('samples.npy', samples)
 
-    return sample
+    return samples
 
-#sample = generate_data(10)
+sample_number = 5000
+samples = generate_data(sample_number)
 
 #print(np.load("x.npy"))
 #print(np.load("y.npy"))
