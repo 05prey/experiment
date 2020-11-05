@@ -19,19 +19,19 @@ def generate_data(sample_number):
 
         x = np.append(x, rb, axis=0)
 
-        if (-30 <= relative_bearing <= 0) or ( 0 <= relative_bearing <= 30):
+        if (-15 <= relative_bearing <= 0) or ( 0 <= relative_bearing <= 15):
 
             action = 3
 
-        elif (-180 <= relative_bearing <= -150) or (150 <= relative_bearing <= 180):
+        elif (-180 <= relative_bearing <= -165) or (165 <= relative_bearing <= 180):
 
             action = 2
 
-        elif 30 < relative_bearing < 150:
+        elif 15 < relative_bearing < 165:
 
             action = 1
 
-        elif -150 < relative_bearing < -30:
+        elif -165 < relative_bearing < -15:
 
             action = 0
 
