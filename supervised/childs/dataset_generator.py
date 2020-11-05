@@ -9,31 +9,65 @@ def generate_data(sample_number):
     chaff = 2
     missile = 3
 
-    x = np.array([[0]])
+    x = np.array([[0,0,0,0,0,0,15/30,0,0,0,0,0]])
     y = np.array([[3]])
 
     for _ in range(sample_number):
 
         relative_bearing = randint(-180,180)
-        rb = np.array([[relative_bearing]])
+        #rb = np.array([[relative_bearing]])
 
-        x = np.append(x, rb, axis=0)
+        #x = np.append(x, rb, axis=0)
 
-        if (-10 <= relative_bearing <= 0) or ( 0 <= relative_bearing <= 10):
-
-            action = 3
-
-        elif (-180 <= relative_bearing <= -170) or (170 <= relative_bearing <= 180):
-
+        if (-180 <= relative_bearing <= -150):
+            new_x = np.array([[(relative_bearing+150)/30,0,0,0,0,0,0,0,0,0,0,0]])
             action = 2
 
-        elif 10 < relative_bearing < 170:
+        if (-150 < relative_bearing <= -120):
+            new_x = np.array([[0,(relative_bearing+120)/30,0,0,0,0,0,0,0,0,0,0]])
+            action = 0
 
+        if (-120 < relative_bearing <= -90):
+            new_x = np.array([[0,0,(relative_bearing+90)/30,0,0,0,0,0,0,0,0,0]])
+            action = 0
+
+        if (-90 < relative_bearing <= -60):
+            new_x = np.array([[0,0,0,(relative_bearing+60)/30,0,0,0,0,0,0,0,0]])
+            action = 0
+
+        if (-60 < relative_bearing <= -30):
+            new_x = np.array([[0,0,0,0,(relative_bearing+30)/30,0,0,0,0,0,0,0]])
+            action = 0
+
+        if (-30 < relative_bearing <= 0):
+            new_x = np.array([[0,0,0,0,0,(relative_bearing+0)/30,0,0,0,0,0,0]])
+            action = 3
+
+        if (0 < relative_bearing <= 30):
+            new_x = np.array([[0,0,0,0,0,0,(relative_bearing-0)/30,0,0,0,0,0]])
+            action = 3
+
+        if (30 < relative_bearing <= 60):
+            new_x = np.array([[0,0,0,0,0,0,0,(relative_bearing-30)/30,0,0,0,0]])
             action = 1
 
-        elif -170 < relative_bearing < -10:
+        if (60 < relative_bearing <= 90):
+            new_x = np.array([[0,0,0,0,0,0,0,0,(relative_bearing-60)/30,0,0,0]])
+            action = 1
 
-            action = 0
+        if (90 < relative_bearing <= 120):
+            new_x = np.array([[0,0,0,0,0,0,0,0,0,(relative_bearing-90)/30,0,0]])
+            action = 1
+
+        if (120 < relative_bearing <= 150):
+            new_x = np.array([[0,0,0,0,0,0,0,0,0,0,(relative_bearing-120)/30,0]])
+            action = 1
+
+        if (150 < relative_bearing <= 180):
+            new_x = np.array([[0,0,0,0,0,0,0,0,0,0,0,(relative_bearing-150)/30]])
+            action = 2
+
+        x = np.append(x, new_x, axis=0)
 
         action = np.array([[action]])
         y = np.append(y, action, axis=0)
@@ -42,7 +76,7 @@ def generate_data(sample_number):
 
     return sample
 
-#sample = generate_data(10)
+sample = generate_data(10)
 
 #print(np.load("x.npy"))
 #print(np.load("y.npy"))

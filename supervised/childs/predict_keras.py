@@ -4,7 +4,7 @@ from keras.models import Sequential
 from keras.layers import Dense, Dropout, BatchNormalization, LeakyReLU
 
 def myPredict(x_test, model):
-    x_test = x_test.reshape(-1,1)
+    x_test = x_test.reshape(-1,12)
     y_pred = model.predict(x_test)
 
     print("prediction values:",y_pred)
