@@ -75,6 +75,14 @@ plt.ylabel("CE loss")
 plt.legend()
 plt.show()
 
+plt.plot(history_1.history['acc'], color='b', label="accuracy(1)")
+plt.plot(history_12.history['acc'], color='r', label="accuracy(12)")
+plt.title("accuracy vs. epochs")
+plt.xlabel("epochs")
+plt.ylabel("accuracy")
+plt.legend()
+plt.show()
+
 #prediction
 x_test_1 = np.array([160])# test data-> angle:160, expected output node: 2 (chaff)
 myPredict_1(x_test_1, mynet_1.model)
