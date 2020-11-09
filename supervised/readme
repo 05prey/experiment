@@ -1,1 +1,2 @@
-
+dataset_generator.py is used for create dataset just once. we want to fixed dataset and we already have. so we dont use this script. 
+instead,we use train_with_keras_dual.py for train our classifier.
